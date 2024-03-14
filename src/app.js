@@ -19,3 +19,11 @@ app.use(cookieParser()); // cookies store krleta hai server side mai taaki user 
 
 // MIDDLEWARE : software prgram hota hai jo chote chote components handle krta hai like "check use is logged in"
 // simple hai !! .. middleware app.use() ke through implement hota hai aur (req, res , next) .. next means aage wale middleware pr jaao ..
+
+// Routes import
+import userRoute from "./routes/user.routes.js";
+
+// Routes declaration
+app.use("/users", userRoute);
+// http://localhost:8000/users --> phir user.routes.js se /register pr jayega ..
+export { app };
